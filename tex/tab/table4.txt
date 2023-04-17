@@ -1,0 +1,15 @@
+\begin{tabular}{r|ccccc}
+                     &   $100\times\mu$ &  $x$   &  level   &   slope   &   curvature \\ 
+\hline
+ Risk Neutrality     &   $\mu^\star$    & \multicolumn{ 4 }{ c }{ $\phi^\star$}\\
+\hline
+ x & -1.32 & -0.04 & 0.74 & 3.48 & 3.22\\ 
+ level & 0.09 & 0.06 & 0.9 & -0.14 & 0.02\\ 
+ slope & 0.02 & 0.01 & 0.01 & 0.41 & 0.43\\ 
+ curvature & -0.02 & 0.0 & 0.0 & -0.04 & 0.31\\ 
+ aCTUAL     &   $\mu$    & \multicolumn{ 4 }{ c }{ $\phi$}\\
+\hline
+ x & -0.88 & 0.27 & 0.74 & 3.48 & 3.22 \\ 
+ level & -0.1 & -0.07 & 0.9 & -0.14 & 0.02 \\ 
+ slope & 0.02 & 0.01 & 0.01 & 0.41 & 0.43 \\ 
+ curvature & -0.02 & 0.0 & 0.0 & -0.04 & 0.31 \\ 

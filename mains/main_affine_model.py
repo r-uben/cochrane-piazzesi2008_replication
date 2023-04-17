@@ -12,6 +12,7 @@ from src.aux import Aux as aux
 from src.econometrics import Econometrics
 from src.get_files import GetFiles
 from src.files_headers import FilesHeaders as fh
+from src.tables import Tables
 
 from sklearn.linear_model import LinearRegression
 
@@ -31,10 +32,13 @@ def main():
     # plot.Figure6()    
     # plot.Figure7()
     # plot.Figure8()
-    plot.Figure9()
-    plot.Figure10()
+    # plot.Figure9()
+    # plot.Figure10()
 
     ## TABLES
+    show = Tables()
+    show.Table(4)
+    show.Table(5)
 
 if __name__ == '__main__':
     main()

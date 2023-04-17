@@ -442,13 +442,13 @@ class AffineModel:
     @property
     def mu(self):
         if self._mu is None: self.get_affine_model_vars()
-        self.save_result(self._mu, "mu")
+        self._mu = self.save_result(self._mu, "mu")
         return self._mu
 
     @property
     def phi(self):
         if self._phi is None: self.get_affine_model_vars()
-        self.save_result(self._phi, "phi")
+        self._phi = self.save_result(self._phi, "phi")
         return self._phi
     
     @property
@@ -459,7 +459,7 @@ class AffineModel:
     @property
     def V(self):
         if self._V is None: self.get_affine_model_vars()
-        self.save_result(self._V, "V")
+        self._V = self.save_result(self._V, "V")
         return self._V
     
     ## ------------------------------------------------------------------
@@ -486,14 +486,13 @@ class AffineModel:
     def real_phi(self):
 
         output = self.phistar + self.V @ self.lamb1
-        print(output)
         self.save_result(output, "real_phi")
         return output
     
     @property
     def mustar(self):
-        output = self.mu - self.V @ self.lamb0
-        self.save_result(output, "mustar")
+        output = self.mu.values - self.V.values @ self.lamb0.values
+        output = self.save_result(output, "mustar")
         return output
     
     @property
@@ -576,6 +575,7 @@ class AffineModel:
     @property
     def lamb0(self):
         if self._lamb is None: self.create_lambdas()
+        self._lamb0 = self.save_result(self._lamb0, "lamb0")
         return self._lamb0
     
     @property
@@ -651,6 +651,7 @@ class AffineModel:
             raise ValueError("Result must be a float, array or dataframe")
 
         result.to_csv("data/results/" + name + ".csv")
+        return result
 
     def array_mask(self, array):
         return (type(array) == np.ndarray) or (type(array) == np.array)
