@@ -1,6 +1,7 @@
-\documentclass{amsart}
+\documentclass{article}
 
 
+\usepackage{mymath}
 \usepackage{graphicx}
 \usepackage{geometry}
 \geometry{
@@ -10,8 +11,15 @@
 	right=2cm
 }
 
+\usepackage{setspace}
+\spacing{1.5}
+
+\usepackage{caption}
+\captionsetup{format=plain, font=small, labelfont=bf, width=0.75\textwidth}
+
 \title{Advanced Macroeconomics III - Replication of Cochrane and Piazzesi (2008)}
 \author{Rubén Fernández-Fuertes}
+\date{}
 
 %\newcommand{\includefigure}[1]{
 %
@@ -21,59 +29,11 @@
 \begin{document}
 	\maketitle
 
+	\section{Main Results}
 
-	\begin{table}[h!]
-		\centering
-		\input{tab/table1.txt}
-	\end{table}
+	\input{secs/main_results}
+%
 
-
-	\begin{table}[h!]
-		\centering
-		\input{tab/table2.txt}
-	\end{table}
-
-
-	\begin{figure}[h!]
-		\centering
-		\includegraphics[scale=0.5]{fig/eps/Figure3.eps}
-	\end{figure}
-
-	\begin{figure}[h!]
-		\centering
-		\includegraphics[scale=0.5]{fig/eps/Figure4.eps}
-	\end{figure}
-
-	\begin{figure}[h!]
-		\centering
-		\includegraphics[scale=0.5]{fig/eps/Figure5.eps}
-	\end{figure}
-
-	\begin{figure}[h!]
-		\centering
-		\includegraphics[scale=0.5]{fig/eps/Figure6.eps}
-	\end{figure}
-
-	\begin{figure}[h!]
-		\centering
-		\includegraphics[scale=0.5]{fig/eps/Figure7.eps}
-	\end{figure}
-
-	\begin{figure}[h!]
-		\centering
-		\includegraphics[scale=0.5]{fig/eps/Figure8.eps}
-	\end{figure}
-
-	\begin{figure}[h!]
-		\centering
-		\includegraphics[scale=0.5]{fig/eps/Figure9.eps}
-	\end{figure}
-
-
-	\begin{figure}[h!]
-		\centering
-		\includegraphics[scale=0.5]{fig/eps/Figure10.eps}
-	\end{figure}
 
 
 \end{document}

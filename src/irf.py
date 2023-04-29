@@ -40,7 +40,7 @@ class IRF:
 
     def irf_X(self, i, real_or_risk_neutral = "real"):
         """
-        IRF for X.
+        IRF for X. X_{t+1} = mu + phi X_t + eps_{t+1} AR(1)
         """
         # Take the appropriate phi:
         _phi = self.appropriate_phi(real_or_risk_neutral)
